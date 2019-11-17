@@ -22,7 +22,7 @@ You can see for yourself:
 zkit_sdk.setup('https://host-hostId.tresorit.io', '/tenant-tenantId');
 // After logging in...
 zkit_sdk.createTresor().then(tresorId => {
-  return zkit_sdk.encrypt('tresorId','Some sensitive data').then((encryptedText) => {
+  return zkit_sdk.encrypt(tresorId,'Some sensitive data').then((encryptedText) => {
     // Now this text is only decryptable by people who you shared the above "tresor" with
     // You can transport it however you like, it wont leak..
     console.log(encryptedText);  
